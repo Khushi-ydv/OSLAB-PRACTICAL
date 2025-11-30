@@ -1,0 +1,93 @@
+###########################################
+##      output.txt                       ##
+###########################################
+
+--- Task 1: Process Creation Utility ---
+[Notebook] My PID is 450. Launching 3 child processes...
+
+[Notebook] Waiting for all child processes to complete...
+[Child 3] My PID is 519 and my Parent's PID is 450.
+[Child 1] My PID is 517 and my Parent's PID is 450.
+[Child 2] My PID is 518 and my Parent's PID is 450.
+[Notebook] All children have completed.
+
+--------------------------------------------------
+
+--- Task 2: Command Execution Using exec() ---
+
+--- Running Command: 'ls -l' ---
+total 48
+-rw-r--r--. 1 parallels parallels  3288 Sep 28 14:40 Linux.ipynb
+-rw-r--r--. 1 parallels parallels  4863 Aug 16 16:48 OSIntro.ipynb
+-rw-r--r--. 1 parallels parallels 22879 Sep 22 12:22 OSLabAss1.ipynb
+-rw-r--r--. 1 parallels parallels    20 Aug 14 12:19 src.txt
+-rw-r--r--. 1 parallels parallels   243 Aug 14 11:47 system_info copy.txt
+-rw-r--r--. 1 parallels parallels   243 Aug 14 11:42 system_info.txt
+
+
+--- Running Command: 'date' ---
+Sunday 28 September 2025 02:40:07 PM IST
+
+
+--- Running Command: 'whoami' ---
+parallels
+
+
+--- All commands executed. ---
+
+--------------------------------------------------
+
+--- Task 3: Zombie & Orphan Processes ---
+
+## Zombie Simulation ##
+--> The script is running. Quickly open a terminal in VS Code and run:
+    ps -el | grep defunct
+    
+[NOTE: The following is the expected output in a separate terminal during the 20-second sleep period.]
+F S   UID   PID  PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 Z  1000   609   608  0  80   0 -     0 wait   ?        00:00:00 zombie_maker <defunct>
+
+
+## Orphan Simulation ##
+--- Task 3: Creating an Orphan Process ---
+Parent (615) is launching a child process.
+Parent (615) is exiting immediately, orphaning the child.
+
+Parent script has finished. The child is now an orphan running in the background.
+Waiting for the child to finish and write its output...
+
+--- Contents of child_output.txt ---
+Child (616) started with parent 1.
+Child (616) is now an orphan, adopted by parent 1.
+
+--------------------------------------------------
+
+--- Task 4: Inspecting Process Info from /proc ---
+Enter the PID to inspect (e.g., this notebook's kernel: 450): 91
+
+--- Details for Process PID: 91 ---
+
+[+] Process Status:
+  - Name:	code
+  - State:	S (sleeping)
+  - Pid:	91
+  - PPid:	34
+  - VmRSS:	  340156 kB
+
+[+] Executable Path: Not accessible.
+
+--------------------------------------------------
+
+--- Task 5: Process Prioritization ---
+--- Task 5: Process Prioritization (Jupyter Robust Version) ---
+Launching 3 child processes with nice values: [15, 0, -10]...
+Waiting for them to complete...
+
+--- Results ---
+PID: 679    | Requested Nice: -10 | Actual Nice: 0   | Duration: 2.24s
+PID: 678    | Requested Nice: 0   | Actual Nice: 0   | Duration: 2.33s
+PID: 677    | Requested Nice: 15  | Actual Nice: 15  | Duration: 2.37s
+
+--- Simulation Complete ---
+✅ Notice how the process that 'Requested Nice: -10' did not crash.
+   Instead, it ran at the default 'Actual Nice: 0' because of the error handling.

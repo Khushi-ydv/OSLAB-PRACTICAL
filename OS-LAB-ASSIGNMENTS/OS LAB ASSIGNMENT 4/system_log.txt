@@ -1,0 +1,6 @@
+2025-11-29 18:24:45,190 - MainProcess - System Boot sequence initiated...
+2025-11-29 18:24:45,230 - Process-1 - Process-A started
+2025-11-29 18:24:45,231 - Process-2 - Process-B started
+2025-11-29 18:24:46,231 - Process-1 - Process-A terminated
+2025-11-29 18:24:46,236 - Process-2 - Process-B terminated
+2025-11-29 18:24:46,245 - MainProcess - System Shutdown sequence completed.

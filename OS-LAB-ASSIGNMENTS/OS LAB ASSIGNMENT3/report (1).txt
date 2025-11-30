@@ -1,0 +1,24 @@
+
+OS Lab Assignment – Detailed Report
+===================================
+
+1. Introduction
+This report includes CPU Scheduling, File Allocation, Memory Management tasks based on the uploaded assignment PDF.
+
+2. CPU Scheduling
+- Priority Scheduling
+- Round Robin Scheduling
+
+3. File Allocation
+- Sequential Allocation
+- Indexed Allocation
+
+4. Memory Allocation
+- First Fit
+- Best Fit
+- Worst Fit
+- MFT & MVT
+
+5. Conclusion
+This assignment demonstrates core OS mechanisms including scheduling algorithms, file allocation strategies, and memory management.
+

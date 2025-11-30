@@ -1,0 +1,13 @@
+2025-11-29 10:00:01 - Init-Process - Init-Process created
+2025-11-29 10:00:01 - Init-Process - Init-Process started (sleep=2s)
+2025-11-29 10:00:01 - User-Process-1 - User-Process-1 created
+2025-11-29 10:00:01 - User-Process-1 - User-Process-1 started (sleep=2s)
+2025-11-29 10:00:01 - Background-Process - Background-Process created
+2025-11-29 10:00:01 - Background-Process - Background-Process started (sleep=3s)
+2025-11-29 10:00:03 - Init-Process - Init-Process ended
+2025-11-29 10:00:03 - Init-Process - Init-Process joined / terminated
+2025-11-29 10:00:03 - User-Process-1 - User-Process-1 ended
+2025-11-29 10:00:03 - User-Process-1 - User-Process-1 joined / terminated
+2025-11-29 10:00:04 - Background-Process - Background-Process ended
+2025-11-29 10:00:04 - Background-Process - Background-Process joined / terminated
+2025-11-29 10:00:04 - System - System shutdown sequence completed

@@ -1,0 +1,65 @@
+Setup complete: Helper files created successfully.
+
+--- Task 1: Batch Processing Simulation ---
+Main System: Launching batch_script_1.py...
+--> Script 1 is executing: Hello World
+Main System: batch_script_1.py executed successfully.
+
+Main System: Launching batch_script_2.py...
+--> Script 2 is executing: Calculating...
+--> Script 2 finished.
+Main System: batch_script_2.py executed successfully.
+
+--- Task 2: System Startup & Logging ---
+System Booting...
+System Shutdown. Check 'system_log.txt' for details.
+
+--- Task 3: IPC using Pipe and Fork ---
+Parent: creating child process...
+Parent (PID 12345): Sending message to child...
+Child  (PID 12346): Received -> 'Hello from Parent Process!'
+Parent: Child process finished.
+
+--- Task 4: VM Detection & Shell Interaction ---
+--- Shell Script Output ---
+Kernel Version: 6.8.0-40-generic
+User: student_user
+
+--- Python VM Detection ---
+System: Linux
+Node Name: ubuntu-dev
+No obvious VM signatures found (likely Host OS or unprivileged container).
+
+--- Task 5: CPU Scheduling Automation ---
+
+[FCFS Scheduling]
+PID	BT	WT	TAT
+1	10	0	10
+2	5	10	15
+3	8	15	23
+Avg Waiting Time: 8.33
+Avg Turnaround Time: 16.00
+
+[SJF Scheduling - Non-Preemptive]
+PID	BT	WT	TAT
+2	5	0	5
+3	8	5	13
+1	10	13	23
+Avg Waiting Time: 6.00
+Avg Turnaround Time: 13.67
+
+[Priority Scheduling (Lower = Higher)]
+PID	BT	Pri	WT	TAT
+2	5	1	0	5
+1	10	2	5	15
+3	8	3	15	23
+Avg Waiting Time: 6.67
+Avg Turnaround Time: 14.33
+
+[Round Robin Scheduling (Quantum=4)]
+PID	BT	WT	TAT
+2	5	9	14
+1	10	13	23
+3	8	15	23
+Avg Waiting Time: 12.33
+Avg Turnaround Time: 20.00
